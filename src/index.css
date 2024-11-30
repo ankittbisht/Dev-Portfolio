@@ -1,4 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@font-face {
+  font-family: "mdwide";
+  src: url("./assets/font/Mona-Sans-MediumWide.ttf");
+}
+
+@font-face {
+  font-family: "boldwide";
+  src: url("./assets/font/Mona-Sans-BoldWide.ttf");
+}
+
+@font-face {
+  font-family: "regwide";
+  src: url("./assets/font/Mona-Sans-RegularWide.ttf");
+}
+
+@font-face {
+  font-family: "semibold";
+  src: url("./assets/font/Mona-Sans-SemiBoldWide.ttf");
+}

@@ -31,13 +31,16 @@ module.exports = {
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
       },
-     
+      fontFamily: {
+        Monamd: ["mdwide", "serif"],
+        Monabold: ["boldwide", "serif"],
+        Monaregular: ["regwide", "serif"],
+        Monasemiwide: ["semibold", "serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
-
-
 
 // keyframes: {
 //   "accordion-down": {

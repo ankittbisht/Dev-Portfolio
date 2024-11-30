@@ -38,12 +38,12 @@ function ProjectCard({
       </div>
       <div className="px-2 bg-white">
         <div className="space-y-1">
-          <div className="mt-1 text-base text-black font-medium">{title}</div>
-          <time className="font-sans text-xs">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
+          <div className="mt-1 text-base text-black font-Monamd">{title}</div>
+          <time className="font-Monaregular text-xs ">{dates}</time>
+          <div className="hidden font-Monaregular text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <div className="prose max-w-full text-pretty font-Monaregular text-xs text-muted-foreground dark:prose-invert">
             {description}
           </div>
         </div>
@@ -53,7 +53,7 @@ function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <div
-                className="px-1 py-0 text-[10px] bg-[#f5f5f5]  rounded-sm font-semibold"
+                className="px-1 py-0 text-[10px] bg-[#f5f5f5]  rounded-sm font-Monamd"
                 variant="secondary"
                 key={tag}
               >
@@ -70,7 +70,7 @@ function ProjectCard({
               <a href={link?.href} key={idx} target="_blank">
                 <div
                   key={idx}
-                  className="flex gap-2 px-2 py-1 text-[10px] bg-black text-white items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  shadow hover:bg-opacity-80 "
+                  className="flex gap-2 px-2 py-1 text-[10px] bg-black text-white items-center rounded-md border  transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent  shadow hover:bg-opacity-80 font-Monamd "
                 >
                   {link.icon}
                   {link.type}

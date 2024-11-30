@@ -11,6 +11,10 @@ import BlurFade from "./components/magicui/blur-fade";
 import Marquee from "./components/magicui/marquee";
 import CertificationSection from "./Homecomponent/Certifications";
 
+import techxerro from "./assets/svg/Techxerro.svg";
+import nietlogo from "./assets/svg/niet.svg";
+import Vbblogo from "./assets/svg/Vbbs.svg";
+
 const BLUR_FADE_DELAY = 0.04;
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -24,6 +28,15 @@ const itemVariants = {
 };
 
 function Home() {
+  const experience = [
+    {
+      id: 1,
+      Company: "TechXerro",
+      title: "FullStack Developer",
+      date: "April 2024 - Present",
+      logo: techxerro,
+    },
+  ];
   const gridPatternRef = useRef(null);
   const [homeHeight, setHomeHeight] = useState(0);
 
@@ -49,10 +62,10 @@ function Home() {
       <div className="max-w-4xl mx-auto min-h-screen py-12 sm:py-24 px-6 space-y-10">
         {/* <DockDemo /> */}
         <div className="mx-auto max-w-4xl w-full space-y-8">
-          <section className="Intro flex gap-2 justify-between items-center">
-            <div className="flex-col flex flex-1">
+          <section className="Intro flex-col md:flex-row flex gap-2 justify-between items-center">
+            <div className="flex-col flex flex-1 order-last md:order-first">
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <h1 className="flex  font-bold items-center text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none whitespace-nowrap">
+                <h1 className="flex  font-bold items-center text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none whitespace-nowrap font-Monabold text-center md:text-start">
                   Namaste, i'm
                   <LetterPullup
                     words="Ankit"
@@ -60,12 +73,12 @@ function Home() {
                     className="text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none"
                   />
                   <motion.span
-                    animate={{ rotate: [0, 20, 0, -20, 0] }} // Rotate animation sequence
+                    animate={{ rotate: [0, 20] }} // Rotate animation sequence
                     transition={{
                       delay: 0.5,
                       type: "tween",
                       repeat: Infinity, // Infinite looping
-                      repeatType: "loop", // Loop the animation
+                      repeatType: "mirror", // Loop the animation
                       duration: 0.5, // Duration for the entire animation cycle (2 seconds)
                       ease: "easeInOut", // Smoother easing for the rotation
                     }}
@@ -75,7 +88,7 @@ function Home() {
                 </h1>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <h2 className="max-w-[600px] md:text-xl mt-4">
+                <h2 className="max-w-[600px] md:text-xl mt-4 font-Monamd text-center md:text-start">
                   Fullstack Developer | Delivering Secure, High-Performance Apps
                   | Assisting Startups & Enterprises Craft intuitive interfaces
                   & efficient backend solutions.
@@ -83,7 +96,7 @@ function Home() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <div className="relative flex size-20 md:size-56 rounded-full  shrink-0">
+              <div className="relative flex size-40 md:size-56 rounded-full  shrink-0">
                 <img
                   className="aspect-square h-full w-full "
                   src={dp1}
@@ -95,10 +108,12 @@ function Home() {
         </div>
         <section className="about ">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold"> About </h2>
+            <h2 className="text-xl  font-Monasemiwide text-center md:text-start">
+              About{" "}
+            </h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <p className="max-w-full text-pretty text-sm text-[#737373] font-normal">
+            <p className="max-w-full text-pretty text-sm text-black text-opacity-60 font-Monaregular text-center md:text-start">
               I am a dedicated full-stack developer with a passion for
               designing, building, and solving complex challenges through
               innovative software solutions. Recently, I graduated with a B.Tech
@@ -121,35 +136,61 @@ function Home() {
         <section className="experience">
           <div className="flex flex-col gap-y-3">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-xl font-bold">Work Experience </h2>
+              <h2 className="text-xl font-Monasemiwide text-center md:text-start">
+                Work Experience{" "}
+              </h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 6}>
-              <div className="rounded-lg flex ">
-                <div className="flex-none">
-                  <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
-                    <img
-                      className="aspect-square h-full w-full object-contain"
-                      src=""
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="flex-grow ml-4 flex-col flex-none">
-                  <div className="flex flex-col">
-                    <div className="flex justify-between">
-                      <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                        Software Engineer
-                      </h3>
-                      <p className="text-sm text-[#737373]">Company Name</p>
-                    </div>
-                    <div className="">
-                      <p className="text-sm">Lorem</p>
+              {experience.map((item, idx) => (
+                <div className="rounded-lg flex ">
+                  <div className="flex-none">
+                    <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
+                      <img
+                        className="aspect-square h-full w-full object-contain"
+                        src={item.logo}
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div className="flex-grow ml-4 flex-col flex-none">
+                    <div className="flex flex-col group">
+                      <div className="flex justify-between cursor-pointer">
+                        <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm">
+                          {item.title}
+                          <div className="transition-transform duration-500  translate-x-0 group-hover:translate-x-2 invisible opacity-0 group-hover:opacity-100 group-hover:visible"
+                          
+                          >
+                            <svg
+                              width="6"
+                              height="8"
+                              viewBox="0 0 6 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 1L4 4L1 7"
+                                stroke="black"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </div>
+                        </h3>
+                        <p className="text-xs md:text-sm text-black text-opacity-60 font-Monaregular">
+                          {item.date}
+                        </p>
+                      </div>
+                      <div className="">
+                        <p className="text-sm font-Monaregular">
+                          {item.Company}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </BlurFade>
-            <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            {/* <BlurFade delay={BLUR_FADE_DELAY * 7}>
               <div className="rounded-lg flex ">
                 <div className="flex-none">
                   <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
@@ -163,26 +204,28 @@ function Home() {
                 <div className="flex-grow ml-4 flex-col flex-none">
                   <div className="flex flex-col">
                     <div className="flex justify-between">
-                      <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+                      <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm">
                         Software Engineer
                       </h3>
-                      <p className="text-[#737373] text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+                      <p className="text-black text-opacity-60 text-xs sm:text-sm tabular-nums text-muted-foreground text-right font-Monaregular">
                         Company Name
                       </p>
                     </div>
                     <div className="">
-                      <p className="text-sm">Lorem</p>
+                      <p className="text-sm font-Monaregular">Lorem</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </BlurFade>
+            </BlurFade> */}
           </div>
         </section>
         <section className="education">
           <div className="flex flex-col gap-y-3">
             <BlurFade delay={BLUR_FADE_DELAY * 8}>
-              <h2 className="text-xl font-bold">Education</h2>
+              <h2 className="text-xl font-Monasemiwide text-center md:text-start  ">
+                Education
+              </h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
               <div className="rounded-lg flex ">
@@ -190,23 +233,25 @@ function Home() {
                   <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
                     <img
                       className="aspect-square h-full w-full object-contain"
-                      src=""
+                      src={nietlogo}
                       alt=""
                     />
                   </span>
                 </div>
                 <div className="flex-grow ml-4 flex-col flex-none">
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between gap-x-2 text-base">
-                      <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm ">
+                    <div className="flex items-start md:items-center justify-between md:gap-x-2 text-base flex-col md:flex-row">
+                      <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm ">
                         Noida Institute of Engineering and Technology
                       </h3>
-                      <p className=" text-[#737373] text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+                      <p className=" text-black text-opacity-60 text-xs sm:text-sm tabular-nums font-Monaregular text-muted-foreground text-right">
                         2020-2024
                       </p>
                     </div>
                     <div className="">
-                      <p className="text-sm"> BTECH , CSE</p>
+                      <p className="text-xs md:text-sm font-Monaregular">
+                        BTECH , CSE
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -218,23 +263,25 @@ function Home() {
                   <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
                     <img
                       className="aspect-square h-full w-full object-contain"
-                      src=""
+                      src={Vbblogo}
                       alt=""
                     />
                   </span>
                 </div>
                 <div className="flex-grow ml-4 flex-col flex-none">
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between gap-x-2 text-base">
-                      <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                        Software Engineer
+                    <div className="flex items-start md:items-center justify-between md:gap-x-2 text-base flex-col md:flex-row">
+                      <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm ">
+                        Vidya Bal Bhawan Sr. Sec. School
                       </h3>
-                      <p className=" text-[#737373] text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                        Company Name
+                      <p className=" text-black text-opacity-60 text-xs sm:text-sm tabular-nums font-Monaregular text-muted-foreground text-right">
+                        2018-2020
                       </p>
                     </div>
                     <div className="">
-                      <p className="text-sm">Lorem</p>
+                      <p className="text-xs md:text-sm font-Monaregular">
+                        PCM , CBSE
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -245,7 +292,9 @@ function Home() {
         <section className="Skills">
           <div className="flex flex-col gap-y-3">
             <BlurFade delay={BLUR_FADE_DELAY * 11}>
-              <h2 className="text-xl font-bold">Skills</h2>
+              <h2 className="text-xl font-Monasemiwide text-center md:text-start">
+                Skills
+              </h2>
             </BlurFade>
             <Marquee>
               {techs.map((item, index) => (
@@ -293,13 +342,13 @@ function Home() {
             <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-[#08090a] text-white px-3 py-1 text-sm">
+                  <div className="inline-block font-Monasemiwide rounded-lg bg-[#08090a] text-white px-3 py-1 text-sm">
                     My Projects
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  <h2 className="text-3xl font-Monasemiwide tracking-tighter sm:text-5xl">
                     Check out my latest work
                   </h2>
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="text-muted-foreground md:text-xl lg:text-base xl:text-xl font-Monamd">
                     I&apos;ve worked on a variety of projects, from simple
                     websites to complex web applications. Here are a few of my
                     favorites.
