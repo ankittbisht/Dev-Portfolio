@@ -1,124 +1,158 @@
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
+import techxerro from "../src/assets/images/techxerro.png"
+import softside from "../src/assets/images/softside.png"
+import xponentfunds from "../src/assets/images/xponentfund.png"
+import ses from "../src/assets/images/ses.png"
+import ph3 from "../src/assets/images/ph3.png"
+import varnindesign from "../src/assets/images/varnindesign.png"
 
 const projects = [
   {
-    title: "Chat Collect",
-    href: "https://chatcollect.com",
+    title: "Techxerro",
+    href: "https://techxerro.com",
     dates: "Jan 2024 - Feb 2024",
     active: true,
     description:
-      "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+      "Designed and built the company's official website, TechXerro, from scratch with a focus on performance and user experience. The website includes over 60+ fully optimized pages with consistent 90+ performance scores. Integrated custom animations and loaders to enhance interactivity.",
     technologies: [
-      "Next.js",
-      "Typescript",
-      "PostgreSQL",
-      "Prisma",
+      "React.js",
+      "MongoDB",
+      "ExpressJS",
       "TailwindCSS",
-      "Stripe",
-      "Shadcn UI",
-      "Magic UI",
+      "Framer Motion",
     ],
     links: [
       {
         type: "Website",
-        href: "https://chatcollect.com",
+        href: "https://techxerro.com",
         icon: <CiGlobe />
       },
     ],
-    image: "",
-    video:
-      "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+    image: techxerro,
+
   },
   {
-    title: "Magic UI",
-    href: "https://magicui.design",
+    title: "SoftSide",
+    href: "https://www.softsidebyhunt.com/",
     dates: "June 2023 - Present",
     active: true,
     description:
-      "Designed, developed and sold animated UI components for developers.",
+      "Developed Softside, a product-selling website, incorporating robust features like payment integration and product tracking. Integrated Stripe for secure payments and USPS services for seamless order delivery and tracking.",
     technologies: [
-      "Next.js",
-      "Typescript",
-      "PostgreSQL",
-      "Prisma",
+      "React.js",
+      "Node.js",
+      "Express.js",
       "TailwindCSS",
       "Stripe",
-      "Shadcn UI",
-      "Magic UI",
     ],
     links: [
       {
         type: "Website",
-        href: "https://magicui.design",
-        icon : <FaGithub />
+        href: "https://www.softsidebyhunt.com/",
+        icon: <CiGlobe />
       },
-      {
-        type: "Source",
-        href: "https://github.com/magicuidesign/magicui",
-      },
+      // {
+      //   type: "Source",
+      //   href: "https://github.com/magicuidesign/magicui",
+      // },
     ],
-    image: "",
-    video: "https://cdn.magicui.design/bento-grid.mp4",
+    image: softside,
+
   },
   {
-    title: "llm.report",
-    href: "https://llm.report",
+    title: "VarninDesign",
+    href: "https://varnindesign.com/",
     dates: "April 2023 - September 2023",
     active: true,
     description:
-      "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+      "Created VarninDesign from scratch, focusing on delivering a visually appealing and optimized user experience. Achieved a 90+ performance score by utilizing advanced optimization techniques and implemented custom error pages and a contact form.",
     technologies: [
-      "Next.js",
-      "Typescript",
-      "PostgreSQL",
-      "Prisma",
+      "React.js",
+      "Vite",
+      "Framer motion",
       "TailwindCSS",
-      "Shadcn UI",
-      "Magic UI",
-      "Stripe",
-      "Cloudflare Workers",
     ],
     links: [
       {
         type: "Website",
-        href: "https://llm.report",
+        href: "https://varnindesign.com/",
+        icon: <CiGlobe />
       },
-      {
-        type: "Source",
-        href: "https://github.com/dillionverma/llm.report",
-      },
+
     ],
-    image: "",
-    video: "https://cdn.llm.report/openai-demo.mp4",
+    image: varnindesign,
+
   },
   {
-    title: "Automatic Chat",
-    href: "https://automatic.chat",
+    title: "Strategic Education Solutions",
+    href: "https://sesv2.techxerro.site/",
     dates: "April 2023 - March 2024",
     active: true,
     description:
-      "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+      "Built Strategic Education Solutions to provide a seamless and engaging experience for users. Focused on performance optimization and interactive animations. Designed custom contact forms and error pages to enhance functionality.",
     technologies: [
-      "Next.js",
-      "Typescript",
-      "PostgreSQL",
-      "Prisma",
+      "React.js",
       "TailwindCSS",
-      "Shadcn UI",
-      "Magic UI",
-      "Stripe",
-      "Cloudflare Workers",
+      "Framer Motion",
+      "aos animation",
     ],
     links: [
       {
         type: "Website",
-        href: "https://automatic.chat",
+        href: "https://sesv2.techxerro.site/",
+        icon: <CiGlobe />
       },
     ],
-    image: "",
-    video:
-      "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+    image: ses,
+  },
+  {
+    title: "PH3 Security Solutions LLC",
+    href: "https://ph3.techxerro.site/",
+    dates: "April 2023 - March 2024",
+    active: true,
+    description:
+      "Developed PH3 Security Solutions LLC with a performance-driven approach, focusing on usability and functionality. Incorporated animations for an engaging interface and ensured consistent optimization across all pages.",
+    technologies: [
+      "React.js",
+      "Vite",
+      "aos animation",
+      "TailwindCSS",
+      "Framer Motion",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://ph3.techxerro.site/",
+        icon: <CiGlobe />
+      },
+    ],
+    image: ph3,
+  },
+  {
+    title: "XponentFunds",
+    href: "https://www.xponentfunds.com/",
+    dates: "April 2023 - March 2024",
+    active: true,
+    description:
+      "Developed XponentFunds, a full-stack website designed to sell trading courses. Implemented a seamless course purchasing workflow with PayU payment integration. Ensured a responsive and user-friendly design while maintaining high performance standards.",
+    technologies: [
+      "React.js",
+      "MongoDB",
+      "aos animation",
+      "TailwindCSS",
+      "Express",
+      "Nodejs",
+      "PayU"
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://www.xponentfunds.com/",
+        icon: <CiGlobe />
+      },
+    ],
+    image: xponentfunds,
   },
 ];
 

@@ -37,26 +37,18 @@ function Home() {
       logo: techxerro,
     },
   ];
-  const gridPatternRef = useRef(null);
-  const [homeHeight, setHomeHeight] = useState(0);
-
-  // Update height when Home content changes
-  useEffect(() => {
-    if (gridPatternRef.current) {
-      setHomeHeight(gridPatternRef.current.offsetHeight);
-    }
-  }, [gridPatternRef.current?.offsetHeight]);
+ 
 
   return (
-    <div ref={gridPatternRef} className="">
+    <div  className="relative">
       {/* GridPattern positioned inside Home */}
       <GridPattern
-        numSquares={40}
+        numSquares={100}
         maxOpacity={0.2}
         duration={3}
         repeatDelay={1}
-        className="absolute  inset-x-0 inset-y-[-20%] skew-y-12 -z-10"
-        style={{ height: homeHeight }} // Apply dynamic height here
+        className="absolute  inset-x-0 inset-y-[-10%] skew-y-12 -z-10 h-[105%]"
+        // style={{ height: homeHeight }} // Apply dynamic height here
       />
 
       <div className="max-w-4xl mx-auto min-h-screen py-12 sm:py-24 px-6 space-y-10">
@@ -113,7 +105,7 @@ function Home() {
             </h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <p className="max-w-full text-pretty text-sm text-black text-opacity-60 font-Monaregular text-center md:text-start">
+            <p className="max-w-full text-pretty text-sm text-black text-opacity-80 font-Monaregular text-center md:text-start">
               I am a dedicated full-stack developer with a passion for
               designing, building, and solving complex challenges through
               innovative software solutions. Recently, I graduated with a B.Tech
@@ -142,7 +134,7 @@ function Home() {
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 6}>
               {experience.map((item, idx) => (
-                <div className="rounded-lg flex ">
+                <div key={item.id} className="rounded-lg flex ">
                   <div className="flex-none">
                     <span className="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
                       <img
@@ -152,13 +144,13 @@ function Home() {
                       />
                     </span>
                   </div>
-                  <div className="flex-grow ml-4 flex-col flex-none">
+                  <div className="flex-grow ml-2 sm:ml-4 flex-col flex-none">
                     <div className="flex flex-col group">
                       <div className="flex justify-between cursor-pointer">
                         <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm">
                           {item.title}
                           <div className="transition-transform duration-500  translate-x-0 group-hover:translate-x-2 invisible opacity-0 group-hover:opacity-100 group-hover:visible"
-                          
+
                           >
                             <svg
                               width="6"
@@ -238,7 +230,7 @@ function Home() {
                     />
                   </span>
                 </div>
-                <div className="flex-grow ml-4 flex-col flex-none">
+                <div className="flex-grow ml-2 sm:ml-4 flex-col flex-none">
                   <div className="flex flex-col">
                     <div className="flex items-start md:items-center justify-between md:gap-x-2 text-base flex-col md:flex-row">
                       <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm ">
@@ -268,7 +260,7 @@ function Home() {
                     />
                   </span>
                 </div>
-                <div className="flex-grow ml-4 flex-col flex-none">
+                <div className="flex-grow ml-2 sm:ml-4 flex-col flex-none">
                   <div className="flex flex-col">
                     <div className="flex items-start md:items-center justify-between md:gap-x-2 text-base flex-col md:flex-row">
                       <h3 className="inline-flex items-center justify-center font-Monamd leading-none text-xs sm:text-sm ">

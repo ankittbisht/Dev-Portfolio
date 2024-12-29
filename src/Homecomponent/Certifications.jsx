@@ -116,19 +116,19 @@ const CertificationSection = () => {
               <img
                 src={cert.img ? cert.img : cert1}
                 alt={cert.name}
-                className="w-full h-40 object-cover rounded-lg"
+                className="w-full h-40 object-cover rounded-lg object-top"
               />
-              <div className="px-6 pt-6 flex flex-col ">
-                <h3 className="mt-1 text-base text-black font-Monamd ">
+              <div className="px-3 py-4 flex flex-col ">
+                <h3 className=" text-base text-black font-Monamd leading-none ">
                   {cert.name}
                 </h3>
-                <p className="self-start p-1 text-[10px] bg-[#f5f5f5]  rounded-sm  font-Monamd  mb-4 ">
+                <p className="mt-2 self-start px-2 py-1 text-[12px] bg-[#f5f5f5]  rounded-sm  font-Monamd  mb-4  ">
                   {cert.platform}
                 </p>
               </div>
             </div>
 
-            <div className="px-6 pb-6 flex flex-col ">
+            <div className="px-3 pb-3 flex flex-col ">
               <a
                 href={cert.src}
                 target="_blank"
