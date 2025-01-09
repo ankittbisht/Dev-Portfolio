@@ -14,6 +14,7 @@ import CertificationSection from "./Homecomponent/Certifications";
 import techxerro from "./assets/svg/Techxerro.svg";
 import nietlogo from "./assets/svg/niet.svg";
 import Vbblogo from "./assets/svg/Vbbs.svg";
+import { Helmet } from "react-helmet";
 
 const BLUR_FADE_DELAY = 0.04;
 const itemVariants = {
@@ -37,10 +38,39 @@ function Home() {
       logo: techxerro,
     },
   ];
- 
+
 
   return (
-    <div  className="relative">
+    <div className="relative">
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ankit Bisht",
+            "url": "https://ankittbisht.vercel.app/",
+            "image": "https://ankittbisht.vercel.app/assets/dp-photoaidcom-cropped-sfEs2t5x.jpg",
+            "sameAs": [
+              "https://www.linkedin.com/in/ankittbisht/",
+              "https://github.com/ankittbisht"
+            ],
+            "jobTitle": "Full Stack Developer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Freelance / Independent"
+            },
+            "knowsAbout": ["Full Stack Development", "MERN Stack", "Java", "Web Development"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Delhi",
+              "addressRegion": "Delhi",
+              "addressCountry": "India"
+            }
+          }
+          `}
+        </script>
+      </Helmet>
       {/* GridPattern positioned inside Home */}
       <GridPattern
         numSquares={100}
@@ -48,7 +78,7 @@ function Home() {
         duration={3}
         repeatDelay={1}
         className="absolute  inset-x-0 inset-y-[-10%] skew-y-12 -z-10 h-[105%]"
-        // style={{ height: homeHeight }} // Apply dynamic height here
+      // style={{ height: homeHeight }} // Apply dynamic height here
       />
 
       <div className="max-w-4xl mx-auto min-h-screen py-12 sm:py-24 px-6 space-y-10">
@@ -92,7 +122,7 @@ function Home() {
                 <img
                   className="aspect-square h-full w-full "
                   src={dp1}
-                  alt=""
+                  alt="Ankit Bisht Photo"
                 />
               </div>
             </BlurFade>
@@ -140,7 +170,7 @@ function Home() {
                       <img
                         className="aspect-square h-full w-full object-contain"
                         src={item.logo}
-                        alt=""
+                        alt="Company Logo"
                       />
                     </span>
                   </div>
@@ -226,7 +256,7 @@ function Home() {
                     <img
                       className="aspect-square h-full w-full object-contain"
                       src={nietlogo}
-                      alt=""
+                      alt="College logo"
                     />
                   </span>
                 </div>
@@ -256,7 +286,7 @@ function Home() {
                     <img
                       className="aspect-square h-full w-full object-contain"
                       src={Vbblogo}
-                      alt=""
+                      alt="School Logo"
                     />
                   </span>
                 </div>
@@ -295,6 +325,7 @@ function Home() {
                     <img
                       src={item.src}
                       className="size-10 sm:size-16 mx-auto"
+                      alt="Technology logo"
                     />
                     {/* <p className="text-xs sm:text-base font-medium ">
                     {item.name}

@@ -1,19 +1,18 @@
-import GridPattern from "./components/magicui/animated-grid-pattern";
-import Home from "./Home";
-import { DockDemo } from "./Homecomponent/Docke";
+import { lazy, Suspense } from "react";
+// import Home from "./Home";
+const Home = lazy(() => import("./Home"))
+const  DockDemo  = lazy(() => import("./Homecomponent/Docke").then(module => ({ default: module.DockDemo })));
+
+// import { DockDemo } from "./Homecomponent/Docke";
+import Loader from "./Homecomponent/Loader";
 
 function App() {
   return (
     <>
-      {/* <GridPattern
-        numSquares={40}
-        maxOpacity={0.2}
-        duration={3}
-        repeatDelay={1}
-        className="inset-x-0 inset-y-[-30%] min-h-fit  skew-y-12"
-      /> */}
-      <DockDemo />
-      <Home />
+      <Suspense fallback={<Loader />}>
+        <DockDemo />
+        <Home />
+      </Suspense>
     </>
   );
 }
