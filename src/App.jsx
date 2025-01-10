@@ -1,9 +1,6 @@
 import { lazy, Suspense } from "react";
-// import Home from "./Home";
 const Home = lazy(() => import("./Home"))
-const  DockDemo  = lazy(() => import("./Homecomponent/Docke").then(module => ({ default: module.DockDemo })));
-
-// import { DockDemo } from "./Homecomponent/Docke";
+const DockDemo = lazy(() => import("./Homecomponent/Docke").then(module => ({ default: module.DockDemo })));
 import Loader from "./Homecomponent/Loader";
 
 function App() {
