@@ -6,12 +6,13 @@ import xponentfunds from "../src/assets/images/xponentfund.png"
 import ses from "../src/assets/images/ses.png"
 import ph3 from "../src/assets/images/ph3.png"
 import varnindesign from "../src/assets/images/varnindesign.png"
-
+import devMate from "../src/assets/images/DevMate.png"
+import KhaoPio from "../src/assets/images/KhaoPio.png"
 const projects = [
   {
     title: "Techxerro",
     href: "https://techxerro.com",
-    dates: "Jan 2024 - Feb 2024",
+    dates: "Sep 2024 - Present",
     active: true,
     description:
       "Designed and built the company's official website, TechXerro, from scratch with a focus on performance and user experience. The website includes over 60+ fully optimized pages with consistent 90+ performance scores. Integrated custom animations and loaders to enhance interactivity.",
@@ -33,9 +34,31 @@ const projects = [
 
   },
   {
+    title: "Strategic Education Solutions",
+    href: "https://sesv2.techxerro.site/",
+    dates: "Sep 2024 - Oct 2024",
+    active: true,
+    description:
+      "Built Strategic Education Solutions to provide a seamless and engaging experience for users. Focused on performance optimization and interactive animations. Designed custom contact forms and error pages to enhance functionality.",
+    technologies: [
+      "React.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "aos animation",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://sesv2.techxerro.site/",
+        icon: <CiGlobe />
+      },
+    ],
+    image: ses,
+  },
+  {
     title: "SoftSide",
     href: "https://www.softsidebyhunt.com/",
-    dates: "June 2023 - Present",
+    dates: "July 2024 - Aug 2024",
     active: true,
     description:
       "Developed Softside, a product-selling website, incorporating robust features like payment integration and product tracking. Integrated Stripe for secure payments and USPS services for seamless order delivery and tracking.",
@@ -61,9 +84,36 @@ const projects = [
 
   },
   {
+    title: "DevMate",
+    href: "https://devmatee.netlify.app/",
+    dates: "Dec 2024 - Feb 2025",
+    active: true,
+    description:
+      "DevMate is a networking platform for software engineers, enabling swipe-based connections, collaboration, and career growth. It features a dynamic feed, profile customization, and real-time interaction. Built with React, Tailwind, Node.js, and MongoDB, it offers an intuitive and engaging experience for developers to connect and thrive.",
+    technologies: [
+      "React.js",
+      "Redux",
+      "MongoDB",
+      "ExpressJS",
+      "TailwindCSS",
+      "Mongoose",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://devmatee.netlify.app/",
+        icon: <CiGlobe />
+      },
+    ],
+    image: devMate,
+
+  },
+  
+
+  {
     title: "VarninDesign",
     href: "https://varnindesign.com/",
-    dates: "April 2023 - September 2023",
+    dates: "Oct 2024 - Nov 2024",
     active: true,
     description:
       "Created VarninDesign from scratch, focusing on delivering a visually appealing and optimized user experience. Achieved a 90+ performance score by utilizing advanced optimization techniques and implemented custom error pages and a contact form.",
@@ -85,31 +135,36 @@ const projects = [
 
   },
   {
-    title: "Strategic Education Solutions",
-    href: "https://sesv2.techxerro.site/",
-    dates: "April 2023 - March 2024",
+    title: "KhaoPio",
+    href: "https://khao-pio.netlify.app/",
+    dates: "Sep 2024 - Oct 2024",
     active: true,
     description:
-      "Built Strategic Education Solutions to provide a seamless and engaging experience for users. Focused on performance optimization and interactive animations. Designed custom contact forms and error pages to enhance functionality.",
+      "KhaoPio is a food discovery platform utilizing Swiggy's official API to provide real-time restaurant data. It features Redux for cart management, shimmer UI for smooth loading, and an intuitive browsing experience. Built with React, Tailwind, Node.js, and MongoDB, it ensures seamless food exploration.",
     technologies: [
       "React.js",
+      "Redux",
       "TailwindCSS",
-      "Framer Motion",
-      "aos animation",
+
     ],
     links: [
       {
         type: "Website",
-        href: "https://sesv2.techxerro.site/",
+        href: "https://khao-pio.netlify.app/",
         icon: <CiGlobe />
       },
+      // {
+      //   type: "Source",
+      //   href: "https://github.com/ankittbisht/Khao-Pio",
+      // },
     ],
-    image: ses,
+    image: KhaoPio,
+
   },
   {
     title: "PH3 Security Solutions LLC",
     href: "https://ph3.techxerro.site/",
-    dates: "April 2023 - March 2024",
+    dates: "Oct 2024 - Nov 2024",
     active: true,
     description:
       "Developed PH3 Security Solutions LLC with a performance-driven approach, focusing on usability and functionality. Incorporated animations for an engaging interface and ensured consistent optimization across all pages.",
@@ -132,7 +187,7 @@ const projects = [
   {
     title: "XponentFunds",
     href: "https://www.xponentfunds.com/",
-    dates: "April 2023 - March 2024",
+    dates: "Jul 2024 - Aug 2024",
     active: true,
     description:
       "Developed XponentFunds, a full-stack website designed to sell trading courses. Implemented a seamless course purchasing workflow with PayU payment integration. Ensured a responsive and user-friendly design while maintaining high performance standards.",
